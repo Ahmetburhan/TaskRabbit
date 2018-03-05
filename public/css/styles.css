@@ -1,0 +1,74 @@
+button.submit {
+  float: right;
+}
+
+form#cms {
+  margin-top: 50px;
+}
+
+#cms textarea {
+  resize: none;
+}
+
+.panel-heading button.delete,
+button.edit {
+  float: right;
+  margin: 5px;
+}
+
+.top-30 {
+  /* margin-top: 30px; */
+}
+
+#videoBlock {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#videoDiv {
+  width: 100%;
+  height: 560px;
+    position: absolute;
+    z-index: -1;
+}
+
+.h2, h2 {
+  font-size: 2.5em !important;
+  color: #ffffff !important;
+  text-shadow: 2px 2px 2px #000000 !important;
+  color: white !important;
+  z-index: 99 !important;
+}
+
+label {
+  font-size: 1.5em !important;
+  color: #ffffff !important;
+  text-shadow: 2px 2px 2px #000000 !important;
+  color: white !important;
+  z-index: 99 !important;
+}
+.btn-success {
+  center: inherit;
+  color: #ffffff;
+  background-color: #f39c12;
+  border-color: #f39c12;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+}
+button.submit {
+  float: left;
+  width: 33%;
+}
+
+body {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.42857143;
+  color: #2c3e50;
+  background-color: #000000;
+}

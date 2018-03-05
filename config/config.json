@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "8828",
+    "database": "blogger",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "8828",
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+ "production": {
+  "username": "d0ojigx4b23wixsi",
+  "password": "z1r48okd5sg5j03d",
+  "database": "wk5a5vbfne67sp3b",
+  "host": "gx97kbnhgjzh3efb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  "dialect": "mysql"
+}
+}
