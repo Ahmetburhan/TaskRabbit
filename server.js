@@ -7,13 +7,31 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 
+const app = express();
+var multer = require('multer');
+const upload = multer({
+  dest: 'uploads/' // this saves your file into a directory called "uploads"
+}); 
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/cms.html');
+});
+
+// It's very crucial that the file name matches the name attribute in your html
+app.post('/', upload.single('file-to-upload'), (req, res) => {
+  res.redirect('/blog.html');
+});
+
+
+
+
 // Sets up the Express App
 // =============================================================
-var app = express();
 var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
+
 
 // Sets up the Express app to handle data parsing
 
@@ -37,3 +55,4 @@ db.sequelize.sync({ force: true }).then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
+
