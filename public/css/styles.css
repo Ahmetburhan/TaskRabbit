@@ -85,3 +85,272 @@ body {
   color: #2c3e50;
   background-color: #000000;
 }
+
+.container2 {
+  margin-right: 0 !important;
+ margin-left: 0 !important;
+  padding-left: 0px !important;
+padding-right: 0px !important;
+}
+
+/* .hero-img {
+  width: 100%;
+  height: auto;
+} */
+
+.hero-homepage {
+  /* position: relative; */
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+
+
+.hero-homepage .sup-title {
+  font-size: 1.875rem;
+  margin-top: 12%;
+      margin-left: calc(1.625rem * -11);
+}
+
+.hero-homepage .sub-title,
+.hero-homepage .sup-title,
+.hero-homepage .title{
+  display: block;
+  font-family: 'Avengeance Mightiest Avenger', Impact, Helvetica, Verdana, sans-serif;
+  letter-spacing: .03em;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+@font-face {
+  font-family: 'Avengeance Mightiest Avenger';
+  src: url('/fonts/Avengeance Mightiest Avenger.ttf');
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("img_parallax.jpg");
+  /* Set a specific height */
+  height: 500px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-homepage .title {
+  font-size: 6.5rem;
+  line-height: -webkit-calc(1.625rem * 4.5);
+  line-height: -moz-calc(1.625rem * 4.5);
+  line-height: calc(1.625rem * 4.5);
+  margin-top: 2px;
+}
+
+.hero-homepage .sup-title {
+  font-size: 1.875rem;
+}
+.hero-homepage .sub-title {
+    margin-right: -webkit-calc(1.625rem * -7);
+    margin-right: -moz-calc(1.625rem * -7);
+    margin-right: calc(1.625rem * -7);
+    }
+
+    hero-index.less:110 .hero-homepage .sub-title {
+      margin-bottom: 3.25rem;
+    }
+
+
+
+.hero-homepage .hero-text-between {
+  font-size: 1.75rem;
+  color: white
+}
+
+typography.less:155 p {
+  margin: 0 0 1.625rem;
+}
+
+base.less:18 *,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+user agent stylesheet p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+
+.hero-homepage .hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 -webkit-calc(1.625rem * .5);
+  padding: 0 -moz-calc(1.625rem * .5);
+  padding: 0 calc(1.625rem * .5);
+}
+
+.hero-homepage .hero-illustration.planet {
+  -moz-background-size: 100% auto;
+  background-size: 100% auto;
+  background-position: center bottom;
+  background-image: url(../images/hma-world-transparent.svg);
+}
+
+
+.parallax-layer:nth-child(1) {
+  -moz-background-size: 62%;
+  background-size: 62%;
+  background-position: center;
+}
+.hero-illustration {
+  -moz-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+html {
+  font-size: 13px;
+  /* -webkit-tap-highlight-color: rgba(0,0,0,0); */
+}
+
+.bg-full-color,
+.bg-full-color h1,
+.bg-full-color h2,
+.bg-full-color h3,
+.bg-full-color h4,
+.bg-full-color h5,
+.bg-full-color h6 {
+  color: #FFF;
+}
+
+.bg-full-color {
+  background-color: #0059A5;
+}
+/* 
+.hero-homepage .hero-illustration.jack {
+  z-index: 2;
+  pointer-events: none;
+  background-position: center top;
+  background-image: url(../images/hma-hero-homepage-jack.svg);
+  top: -webkit-calc(1.625rem * -1);
+  top: -moz-calc(1.625rem * -1);
+  top: calc(1.625rem * -1);
+  -moz-background-size: auto -moz-calc(1.625rem * 9);
+  background-size: auto -webkit-calc(1.625rem * 9);
+  background-size: auto calc(1.625rem * 7);
+}
+
+.hero-homepage .hero-illustration {
+  will-change: transform;
+}
+
+.parallax-layer:nth-child(2) {
+  -moz-background-size: 200%;
+  background-size: 200%;
+  background-position: center bottom;
+}
+
+.hero-illustration {
+  -moz-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.parallax-layer {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+     */
+
+     .hero-homepage .hero-illustration.jack {
+       z-index: 1;
+       pointer-events: none;
+       background-position: center top;
+       background-image: url(../images/hma-hero-homepage-jack.svg);
+       /* top: -webkit-calc(1.625rem * -1); */
+       /* top: -moz-calc(1.625rem * -1);
+       top: calc(1.625rem * -1); */
+       top: -webkit-calc(1.625rem * -1);
+       -moz-background-size: auto -moz-calc(1.625rem * 9);
+       background-size: auto -webkit-calc(2.625rem * 9);
+       /* background-size: auto -webkit-calc(1.625rem * 9); */
+       /* background-size: auto calc(1.625rem * 9); */
+     }
+
+     .hero-homepage .hero-illustration {
+       will-change: transform;
+     }
+
+     .parallax-layer:nth-child(2) {
+       -moz-background-size: 200%;
+       /* background-size: 200%; */
+       /* background-position: center bottom; */
+     }
+
+     .hero-illustration {
+       -moz-background-size: contain;
+       /* background-size: contain; */
+       background-repeat: no-repeat;
+     }
+
+     .parallax-layer {
+       /* z-index: 0; */
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+     } */
+
+
+     .hero-homepage {
+       /* position: relative; */
+       background-repeat: no-repeat;
+       text-align: center;
+       /* display: -webkit-box; */
+       /* display: -webkit-flex; */
+       display: -moz-box;
+       display: -ms-flexbox;
+       display: flex;
+       /* -webkit-box-orient: vertical; */
+       /* -webkit-box-direction: normal; */
+       /* -webkit-flex-flow: column; */
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+       -ms-flex-flow: column;
+       flex-flow: column;
+       /* -webkit-box-pack: justify; */
+       /* -webkit-justify-content: space-between; */
+       -moz-box-pack: justify;
+       -ms-flex-pack: justify;
+       /* justify-content: space-between; */
+       color: #FFF;
+       padding-top: -webkit-calc(1.625rem * 8);
+       padding-top: -moz-calc(1.625rem * 8);
+       /* padding-top: calc(1.625rem * 8); */
+       /* padding-bottom: -webkit-calc(1.625rem * 5); */
+       padding-bottom: -moz-calc(1.625rem * 5);
+       /* padding-bottom: calc(1.625rem * 5); */
+       background-image: url(../images/hma-hero-homepage-cloud.svg);
+       min-height: 85.375vh;
+       /* background-position: center top; */
+       -moz-background-size: 200%;
+       /* background-size: 200%; */
+       /* -webkit-box-pack: start; */
+       /* -webkit-justify-content: flex-start; */
+       -moz-box-pack: start;
+       -ms-flex-pack: start;
+       /* justify-content: flex-start; */
+     }
