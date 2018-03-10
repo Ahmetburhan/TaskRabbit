@@ -22,9 +22,15 @@ app.post('/', upload.single('file-to-upload'), (req, res) => {
   res.redirect('/blog.html');
 });
 
+// $(document).ready(function () {
+//   var addressPicker = new AddressPicker();
 
-
-
+//   $('#zip_code').typeahead(null, {
+//     displayKey: 'description',
+//     source: addressPicker.ttAdapter()
+//   });
+//   console.log("ready!");
+// });
 // Sets up the Express App
 // =============================================================
 var PORT = process.env.PORT || 8080;
