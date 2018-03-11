@@ -225,6 +225,63 @@ body {
   background-color: #0059A5;
 }
 
+
+.cloud {
+ position: absolute;
+   z-index: 30;
+   top: 0;
+   left: 0;
+   width: 500em;
+   height: 43.75em;
+   opacity: 1;
+   visibility: inherit;
+   background: url(../images/clouds.png) 0 100% repeat-x;
+   animation: cloud 60s linear infinite;
+   animation-duration: 60s;
+   animation-timing-function: linear;
+   animation-delay: initial;
+   animation-iteration-count: infinite;
+   animation-direction: initial;
+   animation-fill-mode: initial;
+   animation-play-state: running;
+   }
+
+   /* .cloud {
+    position: absolute;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    width: 500em;
+    height: 43.75em;
+    opacity: 1;
+    visibility: inherit;
+     background: url(https://www.atrisktech.com/assets/images/clouds.png) 0 100% repeat-x;
+     border-radius: 20px;
+     top: -20px;
+     z-index: -1;
+     animation: cloud 60s linear infinite;
+ 
+     } */
+  
+     /* @keyframes cloud {
+       0% {
+         left: 0px;
+       }
+       100% {
+         left: 1180px;
+       }
+     } */
+@keyframes cloud {
+     0% {
+       /* -webkit-transform: translate3d(0, 0, 0); */
+       transform: translate3d(0, 0, 0);
+     }
+
+    100% {
+       /* -webkit-transform: translate3d(-50%, 0, 0); */
+       transform: translate3d(-50%, 0, 0);
+     }
+    }
 .bg-full-color,
 .bg-full-color h1,
 .bg-full-color h2,
