@@ -156,8 +156,15 @@ padding-right: 0px !important;
     margin-right: calc(1.625rem * -7);
     }
 
-    hero-index.less:110 .hero-homepage .sub-title {
+   .hero-homepage .sub-title {
       margin-bottom: 3.25rem;
+      margin-right: calc(3.625rem * -7);
+      font-size: 1.875rem;
+      margin-top: -1.9rem;
+    }
+
+    #hero-img {
+        margin-top: 16rem;
     }
 
 
