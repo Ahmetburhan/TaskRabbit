@@ -235,7 +235,7 @@ body {
 
 .cloud {
  position: absolute;
-   z-index: 30;
+   z-index: auto;
    top: 0;
    left: 0;
    width: 500em;

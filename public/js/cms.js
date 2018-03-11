@@ -30,6 +30,7 @@ $(document).ready(function() {
     var newPost = {
       title: titleInput.val().trim(),
       body: bodyInput.val().trim(),
+      location: location.val().trim(),      
       category: postCategorySelect.val()
     };
 
@@ -60,6 +61,7 @@ $(document).ready(function() {
         // If this post exists, prefill our cms forms with its data
         titleInput.val(data.title);
         bodyInput.val(data.body);
+        locationInput.val(data.location)
         postCategorySelect.val(data.category);
         // If we have a post with this id, set a flag for us to know to update the post
         // when we hit submit
