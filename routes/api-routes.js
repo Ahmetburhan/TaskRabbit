@@ -52,7 +52,6 @@ module.exports = function(app) {
     db.Post.create({
       title: req.body.title,
       body: req.body.body,
-      location: req.body.body,location
       category: req.body.category
     })
       .then(function(dbPost) {
