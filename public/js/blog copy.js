@@ -66,44 +66,32 @@ $(document).ready(function() {
     var newPostTitle = $("<h2>");
     var newPostLocation = $("<small>");
     var newPostDate = $("<small>");
-    var newPostPrice = $("<h2>");
-    newPostPrice.css({
-      float: "right",
-      "font-weight": "700",
-      "margin-top":
-      "-15px"
-    });
-
-
-
     
-    var newPostPanelBody = $("<div>");
-    newPostPanelBody.addClass("panel-body");
-    var newPostBody = $("<p>");
-    newPostTitle.text(post.title + " " + "|" + " "+ " " + "$" + post.price );
-    newPostBody.text(post.body);
-    // newPostPrice.text("$" + post.price)
-    newPostLocation.text(post.location);
-    var formattedDate = new Date(post.createdAt);
-    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
-    newPostDate.text(formattedDate);
+
     var newPostCategory = $("<h5>");
-    newPostCategory.text(post.category + " " + "Posted @ " +  " " + formattedDate);
+    newPostCategory.text(post.category);
     newPostCategory.css({
       float: "right",
       "font-weight": "700",
       "margin-top":
       "-15px"
     });
+    var newPostPanelBody = $("<div>");
+    newPostPanelBody.addClass("panel-body");
+    var newPostBody = $("<p>");
+    newPostTitle.text(post.title + " ");
+    newPostBody.text(post.body);
+    var formattedDate = new Date(post.createdAt);
+    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
+    newPostDate.text(formattedDate);
     
+    newPostLocation.text(post.location);
 
-    // newPostTitle.append(newPostDate);
-    newPostPanelHeading.append(newPostPrice)
+    newPostTitle.append(newPostDate);
     newPostPanelHeading.append(deleteBtn);
     newPostPanelHeading.append(editBtn);
     newPostPanelHeading.append(newPostTitle);
     newPostPanelHeading.append(newPostCategory);
-    newPostPanelHeading.append(newPostLocation);
     newPostPanelBody.append(newPostBody);
     newPostPanel.append(newPostPanelHeading);
     newPostPanel.append(newPostPanelBody);
@@ -111,9 +99,7 @@ $(document).ready(function() {
     console.log(post.title)
     console.log(post.body)
     console.log(post.location)
-    console.log(post.price)
     console.log(post.category)
-
 
 
 

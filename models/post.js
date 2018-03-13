@@ -14,6 +14,21 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
+    price: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    location: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      validate: {
+        len: [1]
+      }
+    },
+    
     category: {
       type: DataTypes.STRING,
       defaultValue: "Personal"

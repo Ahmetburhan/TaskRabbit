@@ -16,6 +16,7 @@ $(document).ready(function() {
   var bodyInput = $("#body");
   var titleInput = $("#title");
   var locationInput = $("#address2");
+  var priceInput = $("#price");
   var cmsForm = $("#cms");
   var postCategorySelect = $("#category");
   // Giving the postCategorySelect a default value
@@ -31,6 +32,7 @@ $(document).ready(function() {
     var newPost = {
       title: titleInput.val().trim(),
       body: bodyInput.val().trim(),
+      price: priceInput.val().trim(),
       location: locationInput.val().trim(),      
       category: postCategorySelect.val()
     };
@@ -62,6 +64,7 @@ $(document).ready(function() {
         // If this post exists, prefill our cms forms with its data
         titleInput.val(data.title);
         bodyInput.val(data.body);
+        priceInput.val(data.price)
         locationInput.val(data.location)
         postCategorySelect.val(data.category);
         // If we have a post with this id, set a flag for us to know to update the post

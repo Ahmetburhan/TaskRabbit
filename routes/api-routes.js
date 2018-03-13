@@ -52,11 +52,14 @@ module.exports = function(app) {
     db.Post.create({
       title: req.body.title,
       body: req.body.body,
+      price: req.body.price,
+      location: req.body.address2,
       category: req.body.category
     })
       .then(function(dbPost) {
         res.json(dbPost);
       });
+      console.log(db.Post)
   });
 
   // DELETE route for deleting posts
