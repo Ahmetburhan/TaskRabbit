@@ -64,7 +64,9 @@ $(document).ready(function() {
     editBtn.text("EDIT");
     editBtn.addClass("edit btn btn-info");
     var newPostTitle = $("<h2>");
+    var newPostLocation = $("<small>");
     var newPostDate = $("<small>");
+
     var newPostCategory = $("<h5>");
     newPostCategory.text(post.category);
     newPostCategory.css({
@@ -81,6 +83,9 @@ $(document).ready(function() {
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     newPostDate.text(formattedDate);
+    
+    newPostLocation.text(post.location);
+
     newPostTitle.append(newPostDate);
     newPostPanelHeading.append(deleteBtn);
     newPostPanelHeading.append(editBtn);

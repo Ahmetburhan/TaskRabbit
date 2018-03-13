@@ -15,6 +15,7 @@ $(document).ready(function() {
   // Getting jQuery references to the post body, title, form, and category select
   var bodyInput = $("#body");
   var titleInput = $("#title");
+  var locationInput = $("#address2");
   var cmsForm = $("#cms");
   var postCategorySelect = $("#category");
   // Giving the postCategorySelect a default value
@@ -30,7 +31,7 @@ $(document).ready(function() {
     var newPost = {
       title: titleInput.val().trim(),
       body: bodyInput.val().trim(),
-      location: location.val().trim(),      
+      location: locationInput.val().trim(),      
       category: postCategorySelect.val()
     };
 

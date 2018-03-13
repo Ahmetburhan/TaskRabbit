@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CMS - Express</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+    <link rel="stylesheet" href="css/dropzone.css" media="screen" title="no title">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/dropzone.js"></script>
+</head>
+
+<body>
+    <header align="center">
+        <img src='/images/hero-gen.png' alt='headerImg' width='50%' align="middle">
+
+    </header>
+    <div class="container">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col-md-2 col-sm-2 top-30">
+                    <a class="btn btn-success" href="/blog">Go to Main Page</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <form id="cms" action="/" enctype="multipart/form-data" method="post">
+
+                    <label for="title">Posting Title:</label>
+                    <input type="text" class="form-control" id="title">
+                    <br />
+
+                    <label for="location">Your Task Location:</label>
+                    <input type="text" class="form-control" id="location">
+                    <br />
+                    <label for="body">Task Description:</label>
+                    <textarea class="form-control" rows="5" id="body" placeholder="Provide a summary of what you need done for your Tasker. Be sure to include details like the size of your space, any equipment/tools needed, and how to get in."></textarea>
+                    <div class="form-group">
+                        <label for="category">Order Type:</label>
+                        <select class="form-control" id="category">
+                            <option value="Home">Home Repair</option>
+                            <option value="Moving">Moving</option>
+                            <option value="Cleaning">Cleaning</option>
+                        </select>
+                    </div>
+            </div>
+            <!-- <input type="file" name="file-to-upload">
+ -->
+
+            <input id="img-upload" type="file" name="file-to-upload" onchange="previewFile()">
+            <br>
+            <img id="pic" src="" height="200" alt="Image preview...">
+
+            <button type="submit" id="file-to-upload" class="btn btn-success submit" value="Upload">Order</button>
+
+
+        </div>
+
+        </form>
+        <!-- 
+                    <form actionthod="post">
+                        <input type="file" name="file-to-upload">
+                        <input type="submit" class="btn btn-success" value="Upload">
+                </form> -->
+    </div>
+    </div>
+    </div>
+
+
+
+
+    <script>
+        var submitForms = function () {
+            document.getElementById("file-to-upload").submit();
+            document.forms["cms"].submit();
+        }
+        //previewFile START
+        function previewFile() {
+            var preview = document.querySelector('#pic'); //selects the query named img
+            var file = document.querySelector('input[type=file]').files[0]; //sames as here
+            var reader = new FileReader();
+
+            reader.onloadend = function () {
+                preview.src = reader.result;
+            }
+
+            if (file) {
+                reader.readAsDataURL(file); //reads the data as a URL
+            } else {
+                preview.src = "";
+            }
+        }
+  //previewFile END
+
+    </script>
+
+    <!-- Custom Script -->
+    <script src="js/cms.js" type="text/javascript">
+    </script>
+    <script src="js/picupload.js" type="text/javascript">
+    </script>
+<script>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CMS - Express</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+    <link rel="stylesheet" href="css/dropzone.css" media="screen" title="no title">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/dropzone.js"></script>
+</head>
+
+<body>
+    <header align="center">
+        <img src='/images/hero-gen.png' alt='headerImg' width='50%' align="middle">
+
+    </header>
+    <div class="container">
+   </div>
+    <div class="container">
+        <div class="row">
+            <div class="row">
+      <div class="col-md-2 col-sm-2 top-30">
+        <a class="btn btn-success" href="/blog">Go to Main Page</a>
+      </div>
+    </div>
+            <div class="col-md-6 col-md-offset-3">
+                <form id="cms" action="/" enctype="multipart/form-data" method="post">
+                    
+                        <label for="title">Posting Title:</label>
+                        <input type="text" class="form-control" id="title">
+                        <br />
+
+                    <label for="location">Your Task Location:</label>
+                            <input type="text" class="form-control" id="location">
+                            <br />
+                        <label for="body">Task Description:</label>
+                        <textarea class="form-control" rows="5" id="body" placeholder="Provide a summary of what you need done for your Tasker. Be sure to include details like the size of your space, any equipment/tools needed, and how to get in."></textarea>
+                        <div class="form-group">
+                            <label for="category">Order Type:</label>
+                            <select class="form-control" id="category">
+                            <option value="Home">Home Repair</option>
+                            <option value="Moving">Moving</option>
+                            <option value="Cleaning">Cleaning</option>
+                          </select>
+                        </div>
+                        </div>
+<input type="file" name="file-to-upload">
+
+
+<input id="img-upload" type="file" name="file-to-upload" onchange="previewFile()"><br>
+<img id="pic" src="" height="200" alt="Image preview...">
+
+<button type="submit" id="file-to-upload" class="btn btn-success submit" value="Upload">Order</button>
+                    
+
+                    </div>
+
+                    </form>
+                    <form actionthod="post">
+                        <input type="file" name="file-to-upload">
+                        <input type="submit" class="btn btn-success" value="Upload">
+                </form> 
+            </div>
+        </div>
+    </div>
+
+
+
+
+<script>
+var    submitForms = function () {
+        document.getElementById("file-to-upload").submit();
+        document.forms["cms"].submit();
+    }
+//previewFile START
+function previewFile(){
+       var preview = document.querySelector('#pic'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+  //previewFile END
+
+</script>
+
+    <!-- Custom Script -->
+    <script src="js/cms.js" type="text/javascript">
+    </script>
+<script src="js/picupload.js" type="text/javascript">
+    </script>
+
+
+</html>
+<footer>
+        <img src='/images/bottom2.png' alt='footerImg' width='100%'>
+</footer> 
+</script>
+
+</html>
+<footer>
+    <img src='/images/bottom2.png' alt='footerImg' width='100%'>
+</footer>
