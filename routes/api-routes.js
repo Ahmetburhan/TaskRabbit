@@ -53,7 +53,8 @@ module.exports = function(app) {
       title: req.body.title,
       body: req.body.body,
       price: req.body.price,
-      location: req.body.address2,
+      location: req.body.location,
+      fileUpload: req.body.fileUpload,
       category: req.body.category
     })
       .then(function(dbPost) {

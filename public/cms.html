@@ -18,7 +18,7 @@
 	<!-- <link rel="stylesheet" href="js/loc/demo/styles.css"> -->
 
 	<script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
-	
+
 </head>
 
 <body>
@@ -37,106 +37,115 @@
 	<div class="container">
 		<div class="row">
 			<div class="row">
-      <div class="col-md-2 col-sm-2 top-30">
-        <a class="btn btn-success" href="/blog">Go to Main Page</a>
-      </div>
-    </div>
+				<div class="col-md-2 col-sm-2 top-30">
+					<a class="btn btn-success" href="/blog">Go to Main Page</a>
+				</div>
+			</div>
 			<div class="col-md-6 col-md-offset-3">
 				<form id="cms" action="/" enctype="multipart/form-data" method="post">
-					
-						<label for="title">Posting Title:</label>
-						<input type="text" class="form-control" id="title" required>
-						<br />
 
-<!-- <div class="input-field">
+					<label for="title">Posting Title:</label>
+					<input type="text" class="form-control" id="title" required>
+					<br />
+
+					<!-- <div class="input-field">
 	<div class="search_form--label">
 		<label for="search_form--location" required=""></label>
 		<input placeholder="City or State" type="text" name="location" id="location" class="js-search-location"  required=""
 		 autocomplete="on">
 	</div> -->
 
-	
-	<!-- <input placeholder="94025" id="zip_code" type="text" class="validate">
+
+					<!-- <input placeholder="94025" id="zip_code" type="text" class="validate">
           <label for="zip_code">Zip Code</label> -->
-</div>
-<div>					
-					<div class="col-md-6 col-md-offset-3">
+			</div>
+			<div>
+				<div class="col-md-6 col-md-offset-3">
 
-<label for="address2">Task Location:</label>
+					<label for="address">Task Location:</label>
 					<div class="address-panel">
-					<!-- <div class="form-control"> -->
+						<!-- <div class="form-control"> -->
 
-						<input id="address2" class="typeahead form-control" type="text" placeholder="Task Location" required>
-						</div>
+						<input id="address2" class="typeahead" type="text" placeholder="Task Location" required>
 					</div>
-					<div class="col-md-6 col-md-offset-3">
-						<div id="map"></div>
-						<div style="clear:both"></div>
-					</div>
+				</div>
+				<div class="col-md-6 col-md-offset-3">
+					<div id="map"></div>
+					<!-- <div style="clear:both"></div> -->
+				</div>
 
-					<!-- <label for="location">Your Task Location:</label>
+				<!-- <label for="location">Your Task Location:</label>
 					<input placeholder="City or Zip Code" type="text" id="location autocomplete" class="form-control" 
 					 required="" autocomplete="on"  spellcheck="false" dir="auto" style="position: relative; vertical-align: top;"> -->
-					<!-- <input type="text" class="form-control" id="location">
+				<!-- <input type="text" class="form-control" id="location">
 							<br /> -->
-							
-							<!-- <div id="location">
+
+				<!-- <div id="location">
 								<label for="location">Your Task Location:</label>
 							<input id="autocomplete" name="location" placeholder="City or Zip Code" onFocus="geolocate()" type="text"></input>
 							</div>
 							<div id="map"></div> -->
-
-						<label for="body">Task Description:</label>
-						<textarea class="form-control" rows="5" id="body" placeholder="Provide a summary of what you need done for your Tasker. Be sure to include details like the size of your space, any equipment/tools needed, and how to get in."></textarea>
-						<label for="price">Task Projected Price:</label>
-						<input type="text" class="form-control" id="price" required>
-						<br />
-						<div class="form-group">
-							<label for="category">Order Type:</label>
-							<select class="form-control" id="category">
-						    <option value="Personal">Personal</option>
-						    <option value="Product Review">Business</option>
-						    <option value="Political">Catering</option>
-  						</select>
-						</div>
-						</div>
-<input type="file" name="file-to-upload">
-<!-- <input type="submit" class="btn btn-success" value="Upload"> -->
-<button type="submit" id="file-to-upload" class="btn btn-success submit" value="Upload">Order</button>
-					
-
-					</div>
-				 
-
-					<!-- <button type="submit" value="Upload" onclick="submitForms()" class="btn btn-success submit">Submit All</button> -->
-
-					
-
-					<form action="/" enctype="multipart/form-data" method="post">
-						<input type="file" name="file-to-upload">
-						<input type="submit" class="btn btn-success" value="Upload">
-					</form>
+<div class="col-md-6 col-md-offset-3">
+				<label for="body">Task Description:</label>
+				<textarea class="form-control" rows="5" id="body" placeholder="Provide a summary of what you need done for your Tasker. Be sure to include details like the size of your space, any equipment/tools needed, and how to get in."></textarea>
+				<label for="price">Task Projected Price:</label>
+				<input type="text" class="form-control" id="price" required>
+				<br />
+				<div class="form-group">
+					<label for="category">Order Type:</label>
+					<select class="form-control" id="category">
+						<option value="Personal">Personal</option>
+						<option value="Product Review">Business</option>
+						<option value="Political">Catering</option>
+					</select>
+				</div>
 			</div>
+
+			<div class="col-md-6 col-md-offset-3">
+			<input type="file" name="fileUpload2">
+			<!-- <input type="submit" class="btn btn-success" value="Upload"> -->
+			<button type="submit" id="fileUpload" class="btn btn-success submit" value="Upload">Order</button>
+
+
 		</div>
+
+
+		<!-- <button type="submit" value="Upload" onclick="submitForms()" class="btn btn-success submit">Submit All</button> -->
+
+
+<!-- Change /upload-target to your upload address -->
+
+		<!-- <form action="/file-upload" class="dropzone">
+			<div class="fileUpload">
+				<input name="file" type="file" multiple />
+			</div>
+		</form> -->
+<div class="col-md-6 col-md-offset-3">
+		<form action="/" enctype="multipart/form-data" method="post">
+			<input type="file" id="fileUpload">
+			<input type="submit" class="btn btn-success" value="Upload">
+		</form>
+	</div>
+	</div>
 	</div>
 
 
 
 	<!-- <form action="/" enctype="multipart/form-data" method="post">
-		<input type="file" name="file-to-upload">
+		<input type="file" name="fileUpload">
 		<input type="submit" value="Upload">
 	</form> -->
 
 
 
-<script>
-var	submitForms = function () {
-		document.getElementById("file-to-upload").submit();
-		document.forms["cms"].submit();
-	}
+	<script>
+		var submitForms = function () {
+			document.getElementById("fileUpload").submit();
+			document.forms["cms"].submit();
+		}
 
 
-</script>
+	</script>
 
 
 
@@ -145,66 +154,71 @@ var	submitForms = function () {
 	<!-- Custom Script -->
 	<script src="js/cms.js" type="text/javascript"></script>
 
-<script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
-<script src="js/loc/bower_components/jquery/jquery.js"></script>
-<script src="js/loc/bower_components/typeahead.js/dist/bloodhound.js"></script>
-<script src="js/loc/bower_components/typeahead.js/dist/typeahead.jquery.js"></script>
-<script src="js/loc/dist/typeahead-addresspicker.js"></script>
-<script>
-	function displayResults(result, div) {
-		html = ["Address: " + result.address()]
-		html.push("Latitude: " + result.lat())
-		html.push("Longitude: " + result.lng())
-		html.push("Long names:")
-		result.addressTypes().forEach(function (type) {
-			html.push("  " + type + ": " + result.nameForType(type))
+	<script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+	<script src="js/loc/bower_components/jquery/jquery.js"></script>
+	<script src="js/loc/bower_components/typeahead.js/dist/bloodhound.js"></script>
+	<script src="js/loc/bower_components/typeahead.js/dist/typeahead.jquery.js"></script>
+	<script src="js/loc/dist/typeahead-addresspicker.js"></script>
+	<script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+	<link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+
+	<script>
+		function displayResults(result, div) {
+			html = ["Address: " + result.address()]
+			html.push("Latitude: " + result.lat())
+			html.push("Longitude: " + result.lng())
+			html.push("Long names:")
+			result.addressTypes().forEach(function (type) {
+				html.push("  " + type + ": " + result.nameForType(type))
+			})
+			html.push("Short names:")
+			result.addressTypes().forEach(function (type) {
+				html.push("  " + type + ": " + result.nameForType(type, true))
+			})
+			div.html(html.join('\n'));
+		}
+
+		$(function () {
+			var addressPicker = new AddressPicker();
+			$('#address1').typeahead(null, {
+				displayKey: 'description',
+				source: addressPicker.ttAdapter()
+			});
+			addressPicker.bindDefaultTypeaheadEvent($('#address1'))
+			$(addressPicker).on('addresspicker:selected', function (event, result) { displayResults(result, $('#response1')) })
+			$(addressPicker).on('addresspicker:predictions', function (event, result) {
+				if (result && result.length > 0)
+					$('#address1').removeClass("empty")
+				else
+					$('#address1').addClass("empty")
+			})
 		})
-		html.push("Short names:")
-		result.addressTypes().forEach(function (type) {
-			html.push("  " + type + ": " + result.nameForType(type, true))
+
+		$(function () {
+			// instantiate the addressPicker suggestion engine (based on bloodhound)
+			var addressPicker = new AddressPicker({ map: { id: '#map' }, marker: { draggable: true, visible: true }, zoomForLocation: 18, reverseGeocoding: true });
+
+			// instantiate the typeahead UI
+			$('#address2').typeahead(null, {
+				displayKey: 'description',
+				source: addressPicker.ttAdapter()
+			});
+			addressPicker.bindDefaultTypeaheadEvent($('#address2'))
+			$(addressPicker).on('addresspicker:selected', function (event, result) {
+				displayResults(result, $('#response2'))
+				if (result.isReverseGeocoding()) {
+					$('#address2').val(result.address())
+				}
+			});
 		})
-		div.html(html.join('\n'));
-	}
-
-	$(function () {
-		var addressPicker = new AddressPicker();
-		$('#address1').typeahead(null, {
-			displayKey: 'description',
-			source: addressPicker.ttAdapter()
-		});
-		addressPicker.bindDefaultTypeaheadEvent($('#address1'))
-		$(addressPicker).on('addresspicker:selected', function (event, result) { displayResults(result, $('#response1')) })
-		$(addressPicker).on('addresspicker:predictions', function (event, result) {
-			if (result && result.length > 0)
-				$('#address1').removeClass("empty")
-			else
-				$('#address1').addClass("empty")
-		})
-	})
-
-	$(function () {
-		// instantiate the addressPicker suggestion engine (based on bloodhound)
-		var addressPicker = new AddressPicker({ map: { id: '#map' }, marker: { draggable: true, visible: true }, zoomForLocation: 18, reverseGeocoding: true });
-
-		// instantiate the typeahead UI
-		$('#address2').typeahead(null, {
-			displayKey: 'description',
-			source: addressPicker.ttAdapter()
-		});
-		addressPicker.bindDefaultTypeaheadEvent($('#address2'))
-		$(addressPicker).on('addresspicker:selected', function (event, result) {
-			displayResults(result, $('#response2'))
-			if (result.isReverseGeocoding()) {
-				$('#address2').val(result.address())
-			}
-		});
-	})
 
 
-</script>
+	</script>
+
+	<script type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "errorBeacon": "bam.nr-data.net", "licenseKey": "194969ee20", "agent": "", "beacon": "bam.nr-data.net", "applicationTime": 26, "applicationID": "1908047", "transactionName": "YQQANkMDCENVAkRfDlhOMRJDCwhXdw5eQhNZDQ4HQ00VWVMPRUZBHiYnNhg=", "queueTime": 1 }</script>
 
 
 </html>
-	<!-- <footer>
+<!-- <footer>
 		<img src='/images/hero.jpg' alt='footerImg' width='100%'>
 	</footer> -->

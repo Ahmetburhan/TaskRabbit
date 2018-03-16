@@ -17,6 +17,7 @@ $(document).ready(function() {
   var titleInput = $("#title");
   var locationInput = $("#address2");
   var priceInput = $("#price");
+  var imageInput = $("#fileUpload");
   var cmsForm = $("#cms");
   var postCategorySelect = $("#category");
   // Giving the postCategorySelect a default value
@@ -33,7 +34,8 @@ $(document).ready(function() {
       title: titleInput.val().trim(),
       body: bodyInput.val().trim(),
       price: priceInput.val().trim(),
-      location: locationInput.val().trim(),      
+      location: locationInput.val().trim(),   
+      fileUpload: imageInput.val().trim(),      
       category: postCategorySelect.val()
     };
 
@@ -66,6 +68,7 @@ $(document).ready(function() {
         bodyInput.val(data.body);
         priceInput.val(data.price)
         locationInput.val(data.location)
+        imageInput.val(data.fileUpload)  
         postCategorySelect.val(data.category);
         // If we have a post with this id, set a flag for us to know to update the post
         // when we hit submit
