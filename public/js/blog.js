@@ -98,7 +98,7 @@ $(document).ready(function() {
     var newPostImage = $("<div>");
     newPostImage.html("<img src="+ post.fileupload + ">");
     newPostImage.css({
-      width: "100%",
+      width: "auto",
     });
 
     // newPostTitle.append(newPostDate);

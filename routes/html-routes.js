@@ -31,4 +31,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/blog.html"));
   });
 
+  // // blog route loads blog.html
+  // app.get("/index", function (req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/hero/app/index.html"));
+  // });
+
 };
