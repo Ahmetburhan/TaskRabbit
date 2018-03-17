@@ -57,7 +57,7 @@ module.exports = function(app) {
       body: req.body.body,
       price: req.body.price,
       location: req.body.location,
-      fileUpload: req.body.fileUpload,
+      fileUpload: req.body.fileupload,
       category: req.body.category
     })
       .then(function(dbPost) {
