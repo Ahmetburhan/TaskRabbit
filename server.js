@@ -4,23 +4,37 @@
 // ******************************************************************************
 // *** Dependencies
 // =============================================================
-var express = require("express");
 var bodyParser = require("body-parser");
 
-const app = express();
-var multer = require('multer');
+// const upload = multer({
+//   dest: 'uploads/' // this saves your file into a directory called "uploads"
+// }); 
+
+const express = require('express');
+const multer = require('multer');
 const upload = multer({
-  dest: 'uploads/' // this saves your file into a directory called "uploads"
-}); 
+  dest: 'public/uploads/' // this saves your file into a directory called "uploads"
+});
+
+const app = express();
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/cms.html');
 });
 
 // It's very crucial that the file name matches the name attribute in your html
-app.post('/', upload.single('file-to-upload'), (req, res) => {
-  res.redirect('/blog.html');
+app.post('/public', upload.single('fileUpload'), (req, res) => {
+  res.redirect('/');
 });
+
+// app.get('/', (req, res) => {
+//   res.sendFile(__dirname + '/public/cms.html');
+// });
+
+// // It's very crucial that the file name matches the name attribute in your html
+// app.post('/', upload.single('file-to-upload'), (req, res) => {
+//   res.redirect('/blog.html');
+// });
 
 // $(document).ready(function () {
 //   var addressPicker = new AddressPicker();

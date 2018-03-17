@@ -49,6 +49,9 @@ module.exports = function(app) {
   // POST route for saving a new post
   app.post("/api/posts", function(req, res) {
     console.log(req.body);
+    console.log(req.body.fileUpload);
+
+
     db.Post.create({
       title: req.body.title,
       body: req.body.body,

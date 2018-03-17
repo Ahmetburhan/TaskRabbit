@@ -91,20 +91,36 @@
 				<label for="price">Task Projected Price:</label>
 				<input type="text" class="form-control" id="price" required>
 				<br />
+				<label for="image">Task Image Link:</label>
+				<input type="text" class="form-control" id="fileupload" placeholder="Please paste project link here!">
+				<br />
 				<div class="form-group">
 					<label for="category">Order Type:</label>
 					<select class="form-control" id="category">
 						<option value="Personal">Personal</option>
-						<option value="Product Review">Business</option>
-						<option value="Political">Catering</option>
+						<option value="House Fix-Up">House Fix-Up</option>
+						<option value="Moving">Moving</option>
+						<option value="Furniture Assembly">Furniture Assembly</option>
+						<option value="House Cleaning">House Cleaning</option>
+						<option value="Yard Work">Yard Work</option>
+						<option value="Installation">Installation</option>
+						<option value="Pet Sitting">Pet Sitting</option>
+						<option value="Dog Walking">Dog Walking</option>
+						<option value="MailBox / Package Pickup">MailBox / Package Pickup</option>
+
 					</select>
 				</div>
 			</div>
 
-			<div class="col-md-6 col-md-offset-3">
-			<input type="file" name="fileUpload2">
+			<!-- <div class="col-md-6 col-md-offset-3">
+			<!-- <input type="file" name="fileUpload2">
 			<!-- <input type="submit" class="btn btn-success" value="Upload"> -->
-			<button type="submit" id="fileUpload" class="btn btn-success submit" value="Upload">Order</button>
+			<!-- <form action="/" enctype="multipart/form-data" method="post">
+				<input type="file" id="file2upload">
+				<input type="submit" value="Upload">
+			</form> --> 
+			<button type="submit" id="submit" data-target="#myModal" class="btn btn-success submit" style="width: 100%" value="Upload">Submit Task</button> 
+						<!-- <button type="submit" class="btn btn-success submit">Submit</button> -->
 
 
 		</div>
@@ -120,11 +136,13 @@
 				<input name="file" type="file" multiple />
 			</div>
 		</form> -->
-<div class="col-md-6 col-md-offset-3">
+<!-- <div class="col-md-6 col-md-offset-3">
 		<form action="/" enctype="multipart/form-data" method="post">
-			<input type="file" id="fileUpload">
+			<input type="file" id="file2Upload">
 			<input type="submit" class="btn btn-success" value="Upload">
 		</form>
+	
+	 -->
 	</div>
 	</div>
 	</div>
@@ -140,12 +158,16 @@
 
 	<script>
 		var submitForms = function () {
-			document.getElementById("fileUpload").submit();
+			document.getElementById("submit").submit();
 			document.forms["cms"].submit();
+			// document.getElementById("myModal").modal('show');
 		}
 
 
 	</script>
+
+	
+			 
 
 
 
@@ -218,6 +240,34 @@
 	<script type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "errorBeacon": "bam.nr-data.net", "licenseKey": "194969ee20", "agent": "", "beacon": "bam.nr-data.net", "applicationTime": 26, "applicationID": "1908047", "transactionName": "YQQANkMDCENVAkRfDlhOMRJDCwhXdw5eQhNZDQ4HQ00VWVMPRUZBHiYnNhg=", "queueTime": 1 }</script>
 
 
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+		
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h3 class="modal-title red">HangGame tutorial!</h3>
+					</div>
+					<h4>Here's the scoop: The objective is to guess what word fills the blank spaces below. If you can't guess ask simpsons a
+						hint</h4>
+					<ol>
+		
+						<li>Click on a key of your guess to start.</li>
+						<li>If the letter is contained in the word(s), it will display in the word board below OR if not part of the hangman will
+							make the sound to alert you, and the letter you chose will go to the bottom as missed letters.</li>
+						<li>Reset and repeat until either you guessed the whole word or the man is hung [heh, heh].</li>
+						<div class="modal-footer">
+		
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		
+		
+						</div>
+		
+				</div>
+			</div>
+		</div>
 </html>
 <!-- <footer>
 		<img src='/images/hero.jpg' alt='footerImg' width='100%'>
