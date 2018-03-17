@@ -91,3 +91,10 @@ $(document).ready(function() {
       });
   }
 });
+
+$("#submit").on("click", function () {
+
+  $(document).ready(function () {
+    $("#myModal").modal('show');
+  });
+});
