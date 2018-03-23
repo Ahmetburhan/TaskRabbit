@@ -1,26 +1,22 @@
-# Eat the Burger!
+# Task Hero!
 
- The goal was to create a Burger App using Node Express Handlebars and our own ORM. It uses the MVC design pattern, Node and MySQL to query and route data to the app and Handlebars to generate the HTML.
+ The goal was to create a web app, which allows users to post tasks they need done, at a given price. Task Heros looking for work can go on site, and reach out to poster to help out with task at the given rate. 
 
 ## Getting Started
-https://burger-franchise.herokuapp.com/
+<<<insert herokuapp link here>>>
 
 ## Screen Shots
 
-![Screen shot](public/images/ScreenShot.png)
-Index Page
+![Screen shot](public/images/ezgif.com-video-to-gif.gif)
 
 
 
 ## Technologies used
 - Node.js
+- Bootstrap/HTML/CSS
 - MySQL
-- Handlebars - http://handlebarsjs.com/
 - body-parser NPM Package - https://www.npmjs.com/package/inquirer
 - express NPM Package - https://www.npmjs.com/package/express
-- mysql NPM Package - https://www.npmjs.com/package/mysql
-- handlebars NPM Package - https://www.npmjs.com/package/handlebars
-- express-handlbars NPM Package - https://www.npmjs.com/package/express-handlebars
 
 ### Prerequisites
 
@@ -32,8 +28,6 @@ Index Page
 ## Built With
 
 * VCode
-* MySql Workbench
 
 ## Authors
-
-* **Ahmet B Koylan** - *JS/Node.js/Handlebars* -
+Ahmet, Rob, Jim, Emma
